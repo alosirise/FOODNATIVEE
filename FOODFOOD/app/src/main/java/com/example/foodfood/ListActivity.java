@@ -29,14 +29,16 @@ public class ListActivity extends AppCompatActivity {
 
         recyclerView=(RecyclerView) findViewById(R.id.myRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        list = new ArrayList<List2>();
+        recyclerView.setHasFixedSize(true);
 
 
 
-        reference = FirebaseDatabase.getInstance().getReference().child("List2");
+
+        reference = FirebaseDatabase.getInstance().getReference().child("restaurant");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                list = new ArrayList<List2>();
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
                     List2 p =dataSnapshot1.getValue(List2.class);
                     list.add(p);
