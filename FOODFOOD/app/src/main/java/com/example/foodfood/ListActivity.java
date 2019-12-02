@@ -21,6 +21,7 @@ public class ListActivity extends AppCompatActivity {
     DatabaseReference reference;
     RecyclerView recyclerView;
     ArrayList<List2> list;
+    MyAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,12 @@ public class ListActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot)
+                for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
+                    List2 p =dataSnapshot1.getValue(List2.class);
+                    list.add(p);
+                }
+                adapter = new MyAdapter(ListActivity.this,list);
+                recyclerView.setAdapter(adapter);
             }
 
             @Override

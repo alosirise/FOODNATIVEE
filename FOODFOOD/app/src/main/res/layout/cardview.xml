@@ -38,11 +38,8 @@
         <button
             android:layout_width="82dp"
             android:layout_height="wrap_content"
-            android:invisibility="invisible"
+            android:visibility="invisible"
             android:text="@String/detail" />
 
-
     </LinearLayout>
-
-
 </LinearLayout>
