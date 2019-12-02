@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.145"
-        app:srcCompat="@drawable/open_mcdonaldPlantbased1" />
+        app:srcCompat="@drawable/burger" />
 
     <Button
         android:id="@+id/button2"
