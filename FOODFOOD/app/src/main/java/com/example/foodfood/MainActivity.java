@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
         TextView loginName = findViewById(R.id.textView);
         if(currentUser != null){
             Log.d(TAG, currentUser.getEmail());
-
             loginName.setText(currentUser.getEmail());
         }
         else{
