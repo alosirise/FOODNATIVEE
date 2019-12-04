@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private void testFireStore(){
         final String TAG = "testFireStore";
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("recommended")
+        db.collection("restaurant")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
             updateUI(currentUser);
