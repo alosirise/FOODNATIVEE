@@ -8,10 +8,11 @@
     tools:context=".ListActivity">
 
     <Button
-        android:id="@+id/signout"
+        android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
+        android:onClick="logoutclick"
         android:text="Sign out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

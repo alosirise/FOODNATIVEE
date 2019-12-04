@@ -52,8 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void signInClick(View view){
         final String TAG = "signInClick";
+
         String email = ((TextView)findViewById(R.id.editText)).getText().toString();
         String password = ((TextView)findViewById(R.id.editText2)).getText().toString();
+
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
